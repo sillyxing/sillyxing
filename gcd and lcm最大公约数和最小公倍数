@@ -1,0 +1,16 @@
+def gcd(x,y):
+    if x > y:
+        smaller = y
+    else:
+        smaller = x
+
+    for i in range(1,smaller+1):
+        if ((x % i ==0) and (y % i ==0)):
+            gcd = i
+    return gcd
+
+a = int(input("#1:"))
+b = int(input("#2:"))
+
+print(a,"and", b,"gcd is", gcd(a,b))
+print(a,"and", b,"lcm is", a*b//gcd(a,b))
